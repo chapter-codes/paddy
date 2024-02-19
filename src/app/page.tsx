@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import BrandName from "@ui/brandName";
 import { CiLogin } from "react-icons/ci";
 import { MdConnectWithoutContact } from "react-icons/md";
+import { IoMdChatbubbles } from "react-icons/io";
+import { MdCall } from "react-icons/md";
+import { IoIosVideocam } from "react-icons/io";
 // import Typewriter from "typewriter-effect";
 
 const metadata: Metadata = {
@@ -26,20 +29,21 @@ export default function Home() {
         </Link>
       </header>
       <main className="bg-blue-500 pb-4">
-        <section className="landing-page">
-          <div className="hero-div mb-6">
+        <section className="landing-page  md:flex flex-row-reverse ">
+          <div className="hero-div mb-6 md:mb-0">
             <Image
               src="/images/hero-desktop.jpg"
               alt="hero image"
-              width={500}
+              width={800}
               height={300}
+              className="md:w-[1000px]"
             />
           </div>
-          <div className="desc flex flex-col items-center px-4 h-full">
-            <p className="font-inter text-2xl text-center text-secondary font-bold grow">
-              {"Let us connect with your friends in real time"}
+          <div className="desc flex flex-col items-center md:items-start md:justify-end md:grow px-4 h-auto">
+            <p className="font-inter text-2xl md:text-4xl md:max-w-[200px] text-center md:text-left text-secondary font-bold grow md:grow-0">
+              {"Let us connect with your friends in real time."}
             </p>
-            <p className="py-4 text-base text-center  font-lato">
+            <p className="px-2 py-4 text-[.85rem] font-medium text-center md:text-left font-lato">
               chat, call and make videos to share your favourite moments
               together.
             </p>
@@ -52,6 +56,34 @@ export default function Home() {
             </Link>
           </div>
         </section>
+        <section>
+          <div>
+            <Image
+              src="/images/connect.jpg"
+              alt="connect with friends"
+              width={800}
+              height={200}
+            />
+          </div>
+
+          <div className="flex items-center justify-between py-4 px-6 gap-4 ">
+            <div className="flex flex-col items-center gap-1">
+              <IoMdChatbubbles size={40} className="text-secondary" />
+              <p className="text-[10px]">send messages</p>
+            </div>
+            <div className="flex flex-col  items-center gap-1">
+              <MdCall size={40} className="text-secondary" />
+              <p className="text-[10px]">Make calls</p>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <IoIosVideocam size={40} className="text-secondary" />
+              <p className="text-[10px]">Make videos</p>
+            </div>
+          </div>
+        </section>
+        <footer className="flex justify-center pt-8">
+          <BrandName text="Paddy" />
+        </footer>
       </main>
     </>
   );
