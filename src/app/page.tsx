@@ -37,7 +37,7 @@ export default function Home() {
           </div>
           <div className="desc flex flex-col items-center px-4 h-full">
             <p className="font-inter text-2xl text-center text-secondary font-bold grow">
-              Let's connect with your friends in real time.
+              {"Let us connect with your friends in real time"}
             </p>
             <p className="py-4 text-base text-center  font-lato">
               chat, call and make videos to share your favourite moments
