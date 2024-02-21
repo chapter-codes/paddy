@@ -18,17 +18,17 @@ const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <header className="pr-4 py-2 flex justify-between items-center">
+      <header className="pr-4 py-2 flex justify-between items-center lg:h-[10vh] lg:h-[10svh]">
         <BrandName classes={``} />
         <Link
-          href="/register"
+          href="/login"
           className="text-secondary hover:text-primary  transition-all hover:scale-[1.1] flex items-center justify-between gap-1 text-sm"
         >
           <CiLogin size={18} className="pr" />
           Join now
         </Link>
       </header>
-      <main className="bg-blue-500 pb-4">
+      <main className="">
         <section className="landing-page  md:flex flex-row-reverse ">
           <div className="hero-div mb-6 md:mb-0">
             <Image
@@ -36,7 +36,7 @@ export default function Home() {
               alt="hero image"
               width={800}
               height={300}
-              className="md:w-[1000px]"
+              className="md:w-[1000px] md:h-[90svh] object-cover"
             />
           </div>
           <div className="desc flex flex-col items-center md:items-start md:justify-end md:grow px-4 h-auto">
@@ -56,7 +56,7 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <section>
+        <section className="flex flex-col md:flex-row p-6">
           <div>
             <Image
               src="/images/connect.jpg"
@@ -66,7 +66,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex items-center justify-between py-4 px-6 gap-4 ">
+          <div className="flex md:flex-col md:grow items-center justify-between py-4 px-4 gap-4 md:py-24 lg:py-60">
             <div className="flex flex-col items-center gap-1">
               <IoMdChatbubbles size={40} className="text-secondary" />
               <p className="text-[10px]">send messages</p>
@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer className="flex justify-center pt-8">
+        <footer className="flex justify-center pt-8 mb-10">
           <BrandName text="Paddy" />
         </footer>
       </main>

@@ -1,21 +1,25 @@
-import logo from "../../../public/images/logo.png";
+import logo from "@public/images/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 interface Props {
   classes?: string;
   text?: string;
   textClass?: string;
+  makeLink?: boolean;
 }
 
-export default function Logo({ classes, text, textClass }: Props) {
+export default function Logo({ classes, text, textClass, makeLink }: Props) {
   return (
     <div className="flex items-center">
-      <Image
-        src={logo}
-        alt="logo"
-        width={30}
-        height={150}
-        className={"ml-1 rounded-md " + classes}
-      />
+      <Link href={makeLink == false ? "" : "/"}>
+        <Image
+          src={logo}
+          alt="logo"
+          width={30}
+          height={150}
+          className={"ml-1 rounded-md " + classes}
+        />
+      </Link>
       {text && (
         <p
           className={

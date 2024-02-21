@@ -24,7 +24,7 @@
       "@server/*": ["./src/components/server/*"],
       "@comp/*": ["./src/components/*"],
       "@fonts/*": ["./public/styles/fonts/*"],
-      "public/*": ["./public/*"],
+      "@public/*": ["./public/*"],
       "@lib/*": ["./src/lib/*"],
       "@/*": ["./src/*"]
     }
